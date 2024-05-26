@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_85b9ff868ba0218e49c54203e01c2a01 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_85b9ff868ba0218e49c54203e01c2a01" ></div>
+        
+</body>
+<script>    
+    
+            var map_85b9ff868ba0218e49c54203e01c2a01 = L.map(
+                "map_85b9ff868ba0218e49c54203e01c2a01",
+                {
+                    center: [0.0, -60.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_96d2d85a12c9fc85ee6ebb67a72293e0 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_85b9ff868ba0218e49c54203e01c2a01);
+        
+    
+            var tile_layer_171d53a1d176b122addbf8d88895b050 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_85b9ff868ba0218e49c54203e01c2a01);
+        
+    
+            var tile_layer_4a1e172e3437f8da23a49f4bb518d6c7 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_85b9ff868ba0218e49c54203e01c2a01);
+        
+    
+            var tile_layer_9da75608eafe0b2c26bb199166f3500f = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_85b9ff868ba0218e49c54203e01c2a01);
+        
+    
+            var tile_layer_12c387e1d28d1002bb92f31c568c201e = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_85b9ff868ba0218e49c54203e01c2a01);
+        
+    
+            var tile_layer_5a4f803e7b19d0e43a8f1d206094cc30 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_85b9ff868ba0218e49c54203e01c2a01);
+        
+    
+            var tile_layer_2dc30aed9fd857c934754fef103a7fb7 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_85b9ff868ba0218e49c54203e01c2a01);
+        
+    
+            var feature_group_40ac56653f581d034c488cc7869c7254 = L.featureGroup(
+                {}
+            ).addTo(map_85b9ff868ba0218e49c54203e01c2a01);
+        
+    
+    var marker_783820beb8d580895e25123f62d6419c = L.marker(
+        [-10.027510175685281, -67.79860213472972],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_afd8ef43da2d40561c01f3b9cf8f4eee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_783820beb8d580895e25123f62d6419c.setIcon(icon_afd8ef43da2d40561c01f3b9cf8f4eee);
+        
+    
+        var popup_daabe8402382326f1b1c1a8112741369 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8cfc8f7151cb48daa5d980f900c3923e = $(`<div id="html_8cfc8f7151cb48daa5d980f900c3923e" style="width: 100.0%; height: 100.0%;"><p id="latlon">-10.027510175685281, -67.79860213472972</p></div>`)[0];
+            popup_daabe8402382326f1b1c1a8112741369.setContent(html_8cfc8f7151cb48daa5d980f900c3923e);
+        
+
+        marker_783820beb8d580895e25123f62d6419c.bindPopup(popup_daabe8402382326f1b1c1a8112741369)
+        ;
+
+        
+    
+    
+            marker_783820beb8d580895e25123f62d6419c.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_6e971541c43bcb64030bf99c02e0c21e = L.marker(
+        [-9.577987737742475, -35.73676536762693],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_a75df7f89dd91b8834bf9792d50df28a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_6e971541c43bcb64030bf99c02e0c21e.setIcon(icon_a75df7f89dd91b8834bf9792d50df28a);
+        
+    
+        var popup_132fa14c8a0565c95fe94cbca3804d97 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e935d79434ca7700c2eecc45c6cb7756 = $(`<div id="html_e935d79434ca7700c2eecc45c6cb7756" style="width: 100.0%; height: 100.0%;"><p id="latlon">-9.577987737742475, -35.73676536762693</p></div>`)[0];
+            popup_132fa14c8a0565c95fe94cbca3804d97.setContent(html_e935d79434ca7700c2eecc45c6cb7756);
+        
+
+        marker_6e971541c43bcb64030bf99c02e0c21e.bindPopup(popup_132fa14c8a0565c95fe94cbca3804d97)
+        ;
+
+        
+    
+    
+            marker_6e971541c43bcb64030bf99c02e0c21e.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_11f06f5f04d644a570d4d17a6c0c447c = L.marker(
+        [-3.0831006566509638, -59.98187843222971],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_a0160f937741671f9a6c6f6d4826c101 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_11f06f5f04d644a570d4d17a6c0c447c.setIcon(icon_a0160f937741671f9a6c6f6d4826c101);
+        
+    
+        var popup_5444fddbcc3a58a847fa4c782048b50d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5ca9ff1089b537a669523ce6af4e4f9a = $(`<div id="html_5ca9ff1089b537a669523ce6af4e4f9a" style="width: 100.0%; height: 100.0%;"><p id="latlon">-3.0831006566509638, -59.98187843222971</p></div>`)[0];
+            popup_5444fddbcc3a58a847fa4c782048b50d.setContent(html_5ca9ff1089b537a669523ce6af4e4f9a);
+        
+
+        marker_11f06f5f04d644a570d4d17a6c0c447c.bindPopup(popup_5444fddbcc3a58a847fa4c782048b50d)
+        ;
+
+        
+    
+    
+            marker_11f06f5f04d644a570d4d17a6c0c447c.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_0fe25a11f9b52fab062829c24a0b9cda = L.marker(
+        [-12.817694185809627, -38.40392663030634],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_b60b55bf21b254c75ce3a0bedd6542e3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_0fe25a11f9b52fab062829c24a0b9cda.setIcon(icon_b60b55bf21b254c75ce3a0bedd6542e3);
+        
+    
+        var popup_80cb0ed3243d22f67e062e61e1f606e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fa1bd5591c43f10d5a925b3ecd6a27aa = $(`<div id="html_fa1bd5591c43f10d5a925b3ecd6a27aa" style="width: 100.0%; height: 100.0%;"><p id="latlon">-12.817694185809627, -38.40392663030634</p></div>`)[0];
+            popup_80cb0ed3243d22f67e062e61e1f606e7.setContent(html_fa1bd5591c43f10d5a925b3ecd6a27aa);
+        
+
+        marker_0fe25a11f9b52fab062829c24a0b9cda.bindPopup(popup_80cb0ed3243d22f67e062e61e1f606e7)
+        ;
+
+        
+    
+    
+            marker_0fe25a11f9b52fab062829c24a0b9cda.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_907001014483cf1ecd6c4cdc3c19a7e3 = L.marker(
+        [-16.031831169456094, -47.97691101163914],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_a315ba76fdc576ee2e6bfa0722e48349 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_907001014483cf1ecd6c4cdc3c19a7e3.setIcon(icon_a315ba76fdc576ee2e6bfa0722e48349);
+        
+    
+        var popup_8a7141a0f136d4f34c52c598a8c32b97 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e88405528c34256929e22130d87f1498 = $(`<div id="html_e88405528c34256929e22130d87f1498" style="width: 100.0%; height: 100.0%;"><p id="latlon">-16.031831169456094, -47.97691101163914</p></div>`)[0];
+            popup_8a7141a0f136d4f34c52c598a8c32b97.setContent(html_e88405528c34256929e22130d87f1498);
+        
+
+        marker_907001014483cf1ecd6c4cdc3c19a7e3.bindPopup(popup_8a7141a0f136d4f34c52c598a8c32b97)
+        ;
+
+        
+    
+    
+            marker_907001014483cf1ecd6c4cdc3c19a7e3.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_b02ebbf9899e460c1cabf0eb069bfead = L.marker(
+        [-3.8286218579137326, -38.503658573016516],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_29149e8a20a1b44087c2a7c6a6449266 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_b02ebbf9899e460c1cabf0eb069bfead.setIcon(icon_29149e8a20a1b44087c2a7c6a6449266);
+        
+    
+        var popup_5d3f5a4c768ccd05b66917dc46e6ca83 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_89b52d65011dca79717a7220bdbb5734 = $(`<div id="html_89b52d65011dca79717a7220bdbb5734" style="width: 100.0%; height: 100.0%;"><p id="latlon">-3.8286218579137326, -38.503658573016516</p></div>`)[0];
+            popup_5d3f5a4c768ccd05b66917dc46e6ca83.setContent(html_89b52d65011dca79717a7220bdbb5734);
+        
+
+        marker_b02ebbf9899e460c1cabf0eb069bfead.bindPopup(popup_5d3f5a4c768ccd05b66917dc46e6ca83)
+        ;
+
+        
+    
+    
+            marker_b02ebbf9899e460c1cabf0eb069bfead.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_aee0508f9c14623292bd0d2c5011b5e9 = L.marker(
+        [-20.368316518126658, -40.42527290330821],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_a2c8845d3f5ac09c89eeed9b18e73ae4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_aee0508f9c14623292bd0d2c5011b5e9.setIcon(icon_a2c8845d3f5ac09c89eeed9b18e73ae4);
+        
+    
+        var popup_8b90a2be370cebc956479496433c51a3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_02ec5d8492faafb5908f9e4bc3a80548 = $(`<div id="html_02ec5d8492faafb5908f9e4bc3a80548" style="width: 100.0%; height: 100.0%;"><p id="latlon">-20.368316518126658, -40.42527290330821</p></div>`)[0];
+            popup_8b90a2be370cebc956479496433c51a3.setContent(html_02ec5d8492faafb5908f9e4bc3a80548);
+        
+
+        marker_aee0508f9c14623292bd0d2c5011b5e9.bindPopup(popup_8b90a2be370cebc956479496433c51a3)
+        ;
+
+        
+    
+    
+            marker_aee0508f9c14623292bd0d2c5011b5e9.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_52cd40765d6fc96cbff07ae4f30406cd = L.marker(
+        [-2.629835834432246, -44.263024459709165],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_9a6dfa884e4523086cdca47c8242570b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_52cd40765d6fc96cbff07ae4f30406cd.setIcon(icon_9a6dfa884e4523086cdca47c8242570b);
+        
+    
+        var popup_b96e5aa0972c0d4747fc23c9aa71f1b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bcc5ccc4a3e6ade540f3b4c942a56b1a = $(`<div id="html_bcc5ccc4a3e6ade540f3b4c942a56b1a" style="width: 100.0%; height: 100.0%;"><p id="latlon">-2.629835834432246, -44.263024459709165</p></div>`)[0];
+            popup_b96e5aa0972c0d4747fc23c9aa71f1b7.setContent(html_bcc5ccc4a3e6ade540f3b4c942a56b1a);
+        
+
+        marker_52cd40765d6fc96cbff07ae4f30406cd.bindPopup(popup_b96e5aa0972c0d4747fc23c9aa71f1b7)
+        ;
+
+        
+    
+    
+            marker_52cd40765d6fc96cbff07ae4f30406cd.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_ae835232124bf86c4bb1327b75a87104 = L.marker(
+        [-15.635037211811278, -56.038971282626925],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_d1bdf03f1e56a952916366dfea85156f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ae835232124bf86c4bb1327b75a87104.setIcon(icon_d1bdf03f1e56a952916366dfea85156f);
+        
+    
+        var popup_a93865b0c972c3f3c4b0e163edd234a2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f231b296b7f011f78565fb6a601b628e = $(`<div id="html_f231b296b7f011f78565fb6a601b628e" style="width: 100.0%; height: 100.0%;"><p id="latlon">-15.635037211811278, -56.038971282626925</p></div>`)[0];
+            popup_a93865b0c972c3f3c4b0e163edd234a2.setContent(html_f231b296b7f011f78565fb6a601b628e);
+        
+
+        marker_ae835232124bf86c4bb1327b75a87104.bindPopup(popup_a93865b0c972c3f3c4b0e163edd234a2)
+        ;
+
+        
+    
+    
+            marker_ae835232124bf86c4bb1327b75a87104.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_4071ec4822a6f2b0fedca86891e69a7f = L.marker(
+        [-20.531867940438595, -54.593857707327615],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_9be484c92d071c29c4d57b4e6e8113ff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4071ec4822a6f2b0fedca86891e69a7f.setIcon(icon_9be484c92d071c29c4d57b4e6e8113ff);
+        
+    
+        var popup_e9c0fd1dbb08ca3437052886148be9b4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4f1e1020ddade6c5a9b66c54ce300399 = $(`<div id="html_4f1e1020ddade6c5a9b66c54ce300399" style="width: 100.0%; height: 100.0%;"><p id="latlon">-20.531867940438595, -54.593857707327615</p></div>`)[0];
+            popup_e9c0fd1dbb08ca3437052886148be9b4.setContent(html_4f1e1020ddade6c5a9b66c54ce300399);
+        
+
+        marker_4071ec4822a6f2b0fedca86891e69a7f.bindPopup(popup_e9c0fd1dbb08ca3437052886148be9b4)
+        ;
+
+        
+    
+    
+            marker_4071ec4822a6f2b0fedca86891e69a7f.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_3b25605528cf73db8b9399be2e4c69e2 = L.marker(
+        [-22.336498544866465, -45.91865885744511],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_f646188433b3f48cd270fa4f25aca375 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_3b25605528cf73db8b9399be2e4c69e2.setIcon(icon_f646188433b3f48cd270fa4f25aca375);
+        
+    
+        var popup_9e39d7f614d8b12a4891fe2f0e7681da = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3a33ba30f9df91e92b1dbf6f755c8369 = $(`<div id="html_3a33ba30f9df91e92b1dbf6f755c8369" style="width: 100.0%; height: 100.0%;"><p id="latlon">-22.336498544866465, -45.91865885744511</p></div>`)[0];
+            popup_9e39d7f614d8b12a4891fe2f0e7681da.setContent(html_3a33ba30f9df91e92b1dbf6f755c8369);
+        
+
+        marker_3b25605528cf73db8b9399be2e4c69e2.bindPopup(popup_9e39d7f614d8b12a4891fe2f0e7681da)
+        ;
+
+        
+    
+    
+            marker_3b25605528cf73db8b9399be2e4c69e2.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_949edb4084346199dafc7e6d46a074af = L.marker(
+        [-1.3667284988737343, -48.32517374113142],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_d3b57c33841d49c19b65d59a1ac1574a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_949edb4084346199dafc7e6d46a074af.setIcon(icon_d3b57c33841d49c19b65d59a1ac1574a);
+        
+    
+        var popup_4997245e9688eb67205ac4bd088b44c4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e1e61242c53cefd41c720687931fae52 = $(`<div id="html_e1e61242c53cefd41c720687931fae52" style="width: 100.0%; height: 100.0%;"><p id="latlon">-1.3667284988737343, -48.32517374113142</p></div>`)[0];
+            popup_4997245e9688eb67205ac4bd088b44c4.setContent(html_e1e61242c53cefd41c720687931fae52);
+        
+
+        marker_949edb4084346199dafc7e6d46a074af.bindPopup(popup_4997245e9688eb67205ac4bd088b44c4)
+        ;
+
+        
+    
+    
+            marker_949edb4084346199dafc7e6d46a074af.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_868f21be3f7807663291c169f37771f4 = L.marker(
+        [-7.159483364548795, -34.90896010069138],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_48d8bc8203b582f21272b5045f855e7a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_868f21be3f7807663291c169f37771f4.setIcon(icon_48d8bc8203b582f21272b5045f855e7a);
+        
+    
+        var popup_ea8feb4097a64b5b59a0d3c3f6adc6c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8ce0759ebf27ead8f91caf07c16ce178 = $(`<div id="html_8ce0759ebf27ead8f91caf07c16ce178" style="width: 100.0%; height: 100.0%;"><p id="latlon">-7.159483364548795, -34.90896010069138</p></div>`)[0];
+            popup_ea8feb4097a64b5b59a0d3c3f6adc6c6.setContent(html_8ce0759ebf27ead8f91caf07c16ce178);
+        
+
+        marker_868f21be3f7807663291c169f37771f4.bindPopup(popup_ea8feb4097a64b5b59a0d3c3f6adc6c6)
+        ;
+
+        
+    
+    
+            marker_868f21be3f7807663291c169f37771f4.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_a0425cd196fdd92e45dbb0b24171ddf8 = L.marker(
+        [-25.561178210185826, -49.17566464392594],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_2d20b95c25bba2a1cd01c5c45e15e75b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a0425cd196fdd92e45dbb0b24171ddf8.setIcon(icon_2d20b95c25bba2a1cd01c5c45e15e75b);
+        
+    
+        var popup_56fa8e2837115d838337749650d61cb1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_20c7149b921e5e900d1bb4e2841f441a = $(`<div id="html_20c7149b921e5e900d1bb4e2841f441a" style="width: 100.0%; height: 100.0%;"><p id="latlon">-25.561178210185826, -49.17566464392594</p></div>`)[0];
+            popup_56fa8e2837115d838337749650d61cb1.setContent(html_20c7149b921e5e900d1bb4e2841f441a);
+        
+
+        marker_a0425cd196fdd92e45dbb0b24171ddf8.bindPopup(popup_56fa8e2837115d838337749650d61cb1)
+        ;
+
+        
+    
+    
+            marker_a0425cd196fdd92e45dbb0b24171ddf8.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_402a2a7e946ed48f1cece6f27ecc9558 = L.marker(
+        [-8.175118252395368, -34.94053113977663],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_7ce463267ca210f79342d2fbd3511a50 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_402a2a7e946ed48f1cece6f27ecc9558.setIcon(icon_7ce463267ca210f79342d2fbd3511a50);
+        
+    
+        var popup_d24c0d1e2332fbbd00ebe6e8bd9ed7ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23de63595229a8b1203196cdd89abdae = $(`<div id="html_23de63595229a8b1203196cdd89abdae" style="width: 100.0%; height: 100.0%;"><p id="latlon">-8.175118252395368, -34.94053113977663</p></div>`)[0];
+            popup_d24c0d1e2332fbbd00ebe6e8bd9ed7ba.setContent(html_23de63595229a8b1203196cdd89abdae);
+        
+
+        marker_402a2a7e946ed48f1cece6f27ecc9558.bindPopup(popup_d24c0d1e2332fbbd00ebe6e8bd9ed7ba)
+        ;
+
+        
+    
+    
+            marker_402a2a7e946ed48f1cece6f27ecc9558.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_c3923395ee5bffd2bc20e77443d3d302 = L.marker(
+        [-5.066431574962992, -42.828061379897534],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_c051d9d0de3bb973f2e6252234662b09 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c3923395ee5bffd2bc20e77443d3d302.setIcon(icon_c051d9d0de3bb973f2e6252234662b09);
+        
+    
+        var popup_0b4bb0e226b8b55475b9bd7cf7485d52 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4a9a80c81e5dc826041acf7876411bd0 = $(`<div id="html_4a9a80c81e5dc826041acf7876411bd0" style="width: 100.0%; height: 100.0%;"><p id="latlon">-5.066431574962992, -42.828061379897534</p></div>`)[0];
+            popup_0b4bb0e226b8b55475b9bd7cf7485d52.setContent(html_4a9a80c81e5dc826041acf7876411bd0);
+        
+
+        marker_c3923395ee5bffd2bc20e77443d3d302.bindPopup(popup_0b4bb0e226b8b55475b9bd7cf7485d52)
+        ;
+
+        
+    
+    
+            marker_c3923395ee5bffd2bc20e77443d3d302.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_fedf3e1f34a128ba4bdc018cde56fbe8 = L.marker(
+        [-22.491561006474846, -44.56396301004122],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_39809365870cb2d3ecae77b5acd2932a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_fedf3e1f34a128ba4bdc018cde56fbe8.setIcon(icon_39809365870cb2d3ecae77b5acd2932a);
+        
+    
+        var popup_2e67cb78146e48df1d82d170d2a9103d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_82e1e7e866018922ad204a1b0bf9bcec = $(`<div id="html_82e1e7e866018922ad204a1b0bf9bcec" style="width: 100.0%; height: 100.0%;"><p id="latlon">-22.491561006474846, -44.56396301004122</p></div>`)[0];
+            popup_2e67cb78146e48df1d82d170d2a9103d.setContent(html_82e1e7e866018922ad204a1b0bf9bcec);
+        
+
+        marker_fedf3e1f34a128ba4bdc018cde56fbe8.bindPopup(popup_2e67cb78146e48df1d82d170d2a9103d)
+        ;
+
+        
+    
+    
+            marker_fedf3e1f34a128ba4bdc018cde56fbe8.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_11e3ef4cb0a2eca07116a83cbe11f57e = L.marker(
+        [-5.899065436806777, -35.25715521859365],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_12be2b216b89b955a15da1f34b94c84e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_11e3ef4cb0a2eca07116a83cbe11f57e.setIcon(icon_12be2b216b89b955a15da1f34b94c84e);
+        
+    
+        var popup_9a58c3efa4bd07a0cd67e881912bf469 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fedff63b0343c3cccadb01ab25e5216a = $(`<div id="html_fedff63b0343c3cccadb01ab25e5216a" style="width: 100.0%; height: 100.0%;"><p id="latlon">-5.899065436806777, -35.25715521859365</p></div>`)[0];
+            popup_9a58c3efa4bd07a0cd67e881912bf469.setContent(html_fedff63b0343c3cccadb01ab25e5216a);
+        
+
+        marker_11e3ef4cb0a2eca07116a83cbe11f57e.bindPopup(popup_9a58c3efa4bd07a0cd67e881912bf469)
+        ;
+
+        
+    
+    
+            marker_11e3ef4cb0a2eca07116a83cbe11f57e.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_32a325101555d57273cf3302daa07d37 = L.marker(
+        [-29.935381485817796, -51.10648012085349],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_76547f625e699e53c8efd6ac1e15e314 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_32a325101555d57273cf3302daa07d37.setIcon(icon_76547f625e699e53c8efd6ac1e15e314);
+        
+    
+        var popup_6f8d45836ffc3c7a514dd10d8d511f2f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a951e38da37b87d5054e75eeda015515 = $(`<div id="html_a951e38da37b87d5054e75eeda015515" style="width: 100.0%; height: 100.0%;"><p id="latlon">-29.935381485817796, -51.10648012085349</p></div>`)[0];
+            popup_6f8d45836ffc3c7a514dd10d8d511f2f.setContent(html_a951e38da37b87d5054e75eeda015515);
+        
+
+        marker_32a325101555d57273cf3302daa07d37.bindPopup(popup_6f8d45836ffc3c7a514dd10d8d511f2f)
+        ;
+
+        
+    
+    
+            marker_32a325101555d57273cf3302daa07d37.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_1f560e45065369f061afb82b49a1f944 = L.marker(
+        [-8.768092643420768, -63.85975600076727],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_94ac88ec29c57a0bd58c6f8e1cc63c82 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_1f560e45065369f061afb82b49a1f944.setIcon(icon_94ac88ec29c57a0bd58c6f8e1cc63c82);
+        
+    
+        var popup_a64f63e7fa449d0f8dcbf353d9e5032c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aef8eb26b90236eab6b87fb075a9b1cb = $(`<div id="html_aef8eb26b90236eab6b87fb075a9b1cb" style="width: 100.0%; height: 100.0%;"><p id="latlon">-8.768092643420768, -63.85975600076727</p></div>`)[0];
+            popup_a64f63e7fa449d0f8dcbf353d9e5032c.setContent(html_aef8eb26b90236eab6b87fb075a9b1cb);
+        
+
+        marker_1f560e45065369f061afb82b49a1f944.bindPopup(popup_a64f63e7fa449d0f8dcbf353d9e5032c)
+        ;
+
+        
+    
+    
+            marker_1f560e45065369f061afb82b49a1f944.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_354fac18ddc2702b7de9b7050f93c60d = L.marker(
+        [2.836504899495603, -60.665568663043736],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_6b4ac217f71bf6adad31fa051d8c1e06 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_354fac18ddc2702b7de9b7050f93c60d.setIcon(icon_6b4ac217f71bf6adad31fa051d8c1e06);
+        
+    
+        var popup_0197e931f6fb536b09980e9d191cce26 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4bb4ccbaca154c5614181e3de775562d = $(`<div id="html_4bb4ccbaca154c5614181e3de775562d" style="width: 100.0%; height: 100.0%;"><p id="latlon">2.836504899495603, -60.665568663043736</p></div>`)[0];
+            popup_0197e931f6fb536b09980e9d191cce26.setContent(html_4bb4ccbaca154c5614181e3de775562d);
+        
+
+        marker_354fac18ddc2702b7de9b7050f93c60d.bindPopup(popup_0197e931f6fb536b09980e9d191cce26)
+        ;
+
+        
+    
+    
+            marker_354fac18ddc2702b7de9b7050f93c60d.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_a8e1e43da2d153e5003fe2ff7538686c = L.marker(
+        [-27.61611094977364, -48.66349109807255],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_09b5bb89f7dc1192170675f12962edd4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a8e1e43da2d153e5003fe2ff7538686c.setIcon(icon_09b5bb89f7dc1192170675f12962edd4);
+        
+    
+        var popup_409031f4e7006ac6461397fb765a530e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_64be66e1d03138087705eafe5406be30 = $(`<div id="html_64be66e1d03138087705eafe5406be30" style="width: 100.0%; height: 100.0%;"><p id="latlon">-27.61611094977364, -48.66349109807255</p></div>`)[0];
+            popup_409031f4e7006ac6461397fb765a530e.setContent(html_64be66e1d03138087705eafe5406be30);
+        
+
+        marker_a8e1e43da2d153e5003fe2ff7538686c.bindPopup(popup_409031f4e7006ac6461397fb765a530e)
+        ;
+
+        
+    
+    
+            marker_a8e1e43da2d153e5003fe2ff7538686c.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_18c38e039688b4be9eb89922ed263cf8 = L.marker(
+        [-23.636336329416086, -46.812386005986866],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_daab86f136200f204d8cdd3a245b56ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_18c38e039688b4be9eb89922ed263cf8.setIcon(icon_daab86f136200f204d8cdd3a245b56ac);
+        
+    
+        var popup_08be85669202f3908a2f7e51fa9174de = L.popup({"maxWidth": "100%"});
+
+        
+            var html_338cb1785b66730e07a253835fa1828f = $(`<div id="html_338cb1785b66730e07a253835fa1828f" style="width: 100.0%; height: 100.0%;"><p id="latlon">-23.636336329416086, -46.812386005986866</p></div>`)[0];
+            popup_08be85669202f3908a2f7e51fa9174de.setContent(html_338cb1785b66730e07a253835fa1828f);
+        
+
+        marker_18c38e039688b4be9eb89922ed263cf8.bindPopup(popup_08be85669202f3908a2f7e51fa9174de)
+        ;
+
+        
+    
+    
+            marker_18c38e039688b4be9eb89922ed263cf8.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_590a7163b2d1a92b470caa3583102971 = L.marker(
+        [-10.906408741753129, -37.13559486076581],
+        {}
+    ).addTo(feature_group_40ac56653f581d034c488cc7869c7254).on('click', onClick);
+    
+            var icon_49997876a730bfff29c21ea1a937ba53 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_590a7163b2d1a92b470caa3583102971.setIcon(icon_49997876a730bfff29c21ea1a937ba53);
+        
+    
+        var popup_9e583d5171d09c9602a2642b15d4151a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a6bb536d59a8dc202785d803de42a0d = $(`<div id="html_0a6bb536d59a8dc202785d803de42a0d" style="width: 100.0%; height: 100.0%;"><p id="latlon">-10.906408741753129, -37.13559486076581</p></div>`)[0];
+            popup_9e583d5171d09c9602a2642b15d4151a.setContent(html_0a6bb536d59a8dc202785d803de42a0d);
+        
+
+        marker_590a7163b2d1a92b470caa3583102971.bindPopup(popup_9e583d5171d09c9602a2642b15d4151a)
+        ;
+
+        
+    
+    
+            marker_590a7163b2d1a92b470caa3583102971.bindTooltip(
+                `<div>
+                     <b>F&F Distribuidora de Produtos</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_fe9492644a30b4a58a2b6423aa18561e = L.featureGroup(
+                {}
+            ).addTo(map_85b9ff868ba0218e49c54203e01c2a01);
+        
+    
+    var marker_6a95bd274396f8c3e707820ac1c33d18 = L.marker(
+        [-23.636140666391913, -46.81247516208351],
+        {}
+    ).addTo(feature_group_fe9492644a30b4a58a2b6423aa18561e).on('click', onClick);
+    
+            var icon_7f7dc0dd10f62c12d71f1c50cf10cb5b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-industry", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6a95bd274396f8c3e707820ac1c33d18.setIcon(icon_7f7dc0dd10f62c12d71f1c50cf10cb5b);
+        
+    
+        var popup_c37a499bedc165b516c23a7784330587 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_87305e38ca81c25b798fb8f1cce02e04 = $(`<div id="html_87305e38ca81c25b798fb8f1cce02e04" style="width: 100.0%; height: 100.0%;"><p id="latlon">-23.636140666391913, -46.81247516208351</p></div>`)[0];
+            popup_c37a499bedc165b516c23a7784330587.setContent(html_87305e38ca81c25b798fb8f1cce02e04);
+        
+
+        marker_6a95bd274396f8c3e707820ac1c33d18.bindPopup(popup_c37a499bedc165b516c23a7784330587)
+        ;
+
+        
+    
+    
+            marker_6a95bd274396f8c3e707820ac1c33d18.bindTooltip(
+                `<div>
+                     <b>ANOVIS Industrial FarmacÃªutica Ltda.</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_139527f108b8612231a63c7c7f7a4b81 = L.marker(
+        [-22.334337502139242, -45.91888552735584],
+        {}
+    ).addTo(feature_group_fe9492644a30b4a58a2b6423aa18561e).on('click', onClick);
+    
+            var icon_ba038a52d0eec8cb0ec1c477214816d4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-industry", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_139527f108b8612231a63c7c7f7a4b81.setIcon(icon_ba038a52d0eec8cb0ec1c477214816d4);
+        
+    
+        var popup_d06ae16d07a471186b2087cc40b83ade = L.popup({"maxWidth": "100%"});
+
+        
+            var html_564401a38f899ffbc143fdc97982ed8b = $(`<div id="html_564401a38f899ffbc143fdc97982ed8b" style="width: 100.0%; height: 100.0%;"><p id="latlon">-22.334337502139242, -45.91888552735584</p></div>`)[0];
+            popup_d06ae16d07a471186b2087cc40b83ade.setContent(html_564401a38f899ffbc143fdc97982ed8b);
+        
+
+        marker_139527f108b8612231a63c7c7f7a4b81.bindPopup(popup_d06ae16d07a471186b2087cc40b83ade)
+        ;
+
+        
+    
+    
+            marker_139527f108b8612231a63c7c7f7a4b81.bindTooltip(
+                `<div>
+                     <b>UQ INDUSTRIA GRAFICA E DE EMBALAGENS</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_abe70c43aeeab1b339a607142bd3bfc7 = L.marker(
+        [-16.031523032131123, -47.97777571087379],
+        {}
+    ).addTo(feature_group_fe9492644a30b4a58a2b6423aa18561e).on('click', onClick);
+    
+            var icon_d409a128ae313a40119d0fd1bd9fb609 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-industry", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_abe70c43aeeab1b339a607142bd3bfc7.setIcon(icon_d409a128ae313a40119d0fd1bd9fb609);
+        
+    
+        var popup_88f1b818b913e07f420bc4c186e1a521 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_96949240df1862b5ee2928590163a569 = $(`<div id="html_96949240df1862b5ee2928590163a569" style="width: 100.0%; height: 100.0%;"><p id="latlon">-16.031523032131123, -47.97777571087379</p></div>`)[0];
+            popup_88f1b818b913e07f420bc4c186e1a521.setContent(html_96949240df1862b5ee2928590163a569);
+        
+
+        marker_abe70c43aeeab1b339a607142bd3bfc7.bindPopup(popup_88f1b818b913e07f420bc4c186e1a521)
+        ;
+
+        
+    
+    
+            marker_abe70c43aeeab1b339a607142bd3bfc7.bindTooltip(
+                `<div>
+                     <b>Uniao QuÃ­mica Farmaceutica Nacional S/A</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_1d596515a7914812ba27ab9af5b91f96 = L.marker(
+        [-16.04605571297774, -47.978035118058564],
+        {}
+    ).addTo(feature_group_fe9492644a30b4a58a2b6423aa18561e).on('click', onClick);
+    
+            var icon_35d0b624ab8fa0c10baf2af6668ca8f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-industry", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1d596515a7914812ba27ab9af5b91f96.setIcon(icon_35d0b624ab8fa0c10baf2af6668ca8f8);
+        
+    
+        var popup_1dff566ca69d4661a339b9d4fac8816f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4d893285cc3163cd2e15f088c68b92f2 = $(`<div id="html_4d893285cc3163cd2e15f088c68b92f2" style="width: 100.0%; height: 100.0%;"><p id="latlon">-16.04605571297774, -47.978035118058564</p></div>`)[0];
+            popup_1dff566ca69d4661a339b9d4fac8816f.setContent(html_4d893285cc3163cd2e15f088c68b92f2);
+        
+
+        marker_1d596515a7914812ba27ab9af5b91f96.bindPopup(popup_1dff566ca69d4661a339b9d4fac8816f)
+        ;
+
+        
+    
+    
+            marker_1d596515a7914812ba27ab9af5b91f96.bindTooltip(
+                `<div>
+                     <b>UniÃ£o QuÃ­mica Farmaceutica Nacional S/A</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_7ea0a054ba63eae0593722a05bcb358d = L.marker(
+        [-23.825164098052053, -46.81666975767215],
+        {}
+    ).addTo(feature_group_fe9492644a30b4a58a2b6423aa18561e).on('click', onClick);
+    
+            var icon_4ec4a6ee52dbb5d566ea50f29ea55828 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-industry", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7ea0a054ba63eae0593722a05bcb358d.setIcon(icon_4ec4a6ee52dbb5d566ea50f29ea55828);
+        
+    
+        var popup_4cfd391db8fa1bafa8a53f97de3413bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_368275e1594ffdcbb3fb725a7345d34a = $(`<div id="html_368275e1594ffdcbb3fb725a7345d34a" style="width: 100.0%; height: 100.0%;"><p id="latlon">-23.825164098052053, -46.81666975767215</p></div>`)[0];
+            popup_4cfd391db8fa1bafa8a53f97de3413bd.setContent(html_368275e1594ffdcbb3fb725a7345d34a);
+        
+
+        marker_7ea0a054ba63eae0593722a05bcb358d.bindPopup(popup_4cfd391db8fa1bafa8a53f97de3413bd)
+        ;
+
+        
+    
+    
+            marker_7ea0a054ba63eae0593722a05bcb358d.bindTooltip(
+                `<div>
+                     <b>UniÃ£o QuÃ­mica Farmaceutica Nacional S/A</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_5ccd9a613d5a680d0834d61e9bb43f3a = L.marker(
+        [-16.704547532148954, -49.23998963580105],
+        {}
+    ).addTo(feature_group_fe9492644a30b4a58a2b6423aa18561e).on('click', onClick);
+    
+            var icon_0dd4d7a122755d76a03490131337852a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-industry", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5ccd9a613d5a680d0834d61e9bb43f3a.setIcon(icon_0dd4d7a122755d76a03490131337852a);
+        
+    
+        var popup_3ce1b5b042f8347b6852a49bd63458da = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c968b05cb6833730591f3f5b92866e3 = $(`<div id="html_2c968b05cb6833730591f3f5b92866e3" style="width: 100.0%; height: 100.0%;"><p id="latlon">-16.704547532148954, -49.23998963580105</p></div>`)[0];
+            popup_3ce1b5b042f8347b6852a49bd63458da.setContent(html_2c968b05cb6833730591f3f5b92866e3);
+        
+
+        marker_5ccd9a613d5a680d0834d61e9bb43f3a.bindPopup(popup_3ce1b5b042f8347b6852a49bd63458da)
+        ;
+
+        
+    
+    
+            marker_5ccd9a613d5a680d0834d61e9bb43f3a.bindTooltip(
+                `<div>
+                     <b>UniÃ£o QuÃ­mica Farmaceutica Nacional S/A</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_b6d02efde53e958ce0b5676d1a26ac97 = L.marker(
+        [-23.46519163384817, -46.5037907036607],
+        {}
+    ).addTo(feature_group_fe9492644a30b4a58a2b6423aa18561e).on('click', onClick);
+    
+            var icon_3d4e8c98c1d874267c9bc5d058b85ac9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-industry", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b6d02efde53e958ce0b5676d1a26ac97.setIcon(icon_3d4e8c98c1d874267c9bc5d058b85ac9);
+        
+    
+        var popup_ce53a0fe6484f3c4a67321fc99620594 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_58c117f3dcc0fc14fd7d787167c1c1a6 = $(`<div id="html_58c117f3dcc0fc14fd7d787167c1c1a6" style="width: 100.0%; height: 100.0%;"><p id="latlon">-23.46519163384817, -46.5037907036607</p></div>`)[0];
+            popup_ce53a0fe6484f3c4a67321fc99620594.setContent(html_58c117f3dcc0fc14fd7d787167c1c1a6);
+        
+
+        marker_b6d02efde53e958ce0b5676d1a26ac97.bindPopup(popup_ce53a0fe6484f3c4a67321fc99620594)
+        ;
+
+        
+    
+    
+            marker_b6d02efde53e958ce0b5676d1a26ac97.bindTooltip(
+                `<div>
+                     <b>INOVAT IndÃºstria FarmacÃªutica Ltda.</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_715d10cbc9c621d69c10b7dc137c8197 = L.marker(
+        [-23.712522160239093, -46.69349432017273],
+        {}
+    ).addTo(feature_group_fe9492644a30b4a58a2b6423aa18561e).on('click', onClick);
+    
+            var icon_f1fff3c9799f428a79c8575d765b8fc3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-industry", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_715d10cbc9c621d69c10b7dc137c8197.setIcon(icon_f1fff3c9799f428a79c8575d765b8fc3);
+        
+    
+        var popup_8b74414319a9de695cf53c9e185186e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a01a694f5c63c1ed4be824b56a283dab = $(`<div id="html_a01a694f5c63c1ed4be824b56a283dab" style="width: 100.0%; height: 100.0%;"><p id="latlon">-23.712522160239093, -46.69349432017273</p></div>`)[0];
+            popup_8b74414319a9de695cf53c9e185186e9.setContent(html_a01a694f5c63c1ed4be824b56a283dab);
+        
+
+        marker_715d10cbc9c621d69c10b7dc137c8197.bindPopup(popup_8b74414319a9de695cf53c9e185186e9)
+        ;
+
+        
+    
+    
+            marker_715d10cbc9c621d69c10b7dc137c8197.bindTooltip(
+                `<div>
+                     <b>LABORATIL Farmaceutica LTDA</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_05fd22d703bd966e95a54fc4a9d802c6 = L.marker(
+        [-22.266051568005885, -45.8912117049583],
+        {}
+    ).addTo(feature_group_fe9492644a30b4a58a2b6423aa18561e).on('click', onClick);
+    
+            var icon_fa9ca11763637151f52072bbfc810515 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-industry", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_05fd22d703bd966e95a54fc4a9d802c6.setIcon(icon_fa9ca11763637151f52072bbfc810515);
+        
+    
+        var popup_111020ca5352689991872121d08485d8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a1861911444ce2abe126b96ef4da45a6 = $(`<div id="html_a1861911444ce2abe126b96ef4da45a6" style="width: 100.0%; height: 100.0%;"><p id="latlon">-22.266051568005885, -45.8912117049583</p></div>`)[0];
+            popup_111020ca5352689991872121d08485d8.setContent(html_a1861911444ce2abe126b96ef4da45a6);
+        
+
+        marker_05fd22d703bd966e95a54fc4a9d802c6.bindPopup(popup_111020ca5352689991872121d08485d8)
+        ;
+
+        
+    
+    
+            marker_05fd22d703bd966e95a54fc4a9d802c6.bindTooltip(
+                `<div>
+                     <b>UniÃ£o QuÃ­mica Farmaceutica Nacional S/A</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_6d3ce880c94f5945ffaa03f73e11295c = L.marker(
+        [-22.271778980017427, -45.9231413873145],
+        {}
+    ).addTo(feature_group_fe9492644a30b4a58a2b6423aa18561e).on('click', onClick);
+    
+            var icon_f97208e5d37bda1286b7ee769bc3288e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-industry", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6d3ce880c94f5945ffaa03f73e11295c.setIcon(icon_f97208e5d37bda1286b7ee769bc3288e);
+        
+    
+        var popup_64e7e7ebd637e3ef3371cab6265c3e08 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_73c40ff39ba857951e94a961aed8b7ca = $(`<div id="html_73c40ff39ba857951e94a961aed8b7ca" style="width: 100.0%; height: 100.0%;"><p id="latlon">-22.271778980017427, -45.9231413873145</p></div>`)[0];
+            popup_64e7e7ebd637e3ef3371cab6265c3e08.setContent(html_73c40ff39ba857951e94a961aed8b7ca);
+        
+
+        marker_6d3ce880c94f5945ffaa03f73e11295c.bindPopup(popup_64e7e7ebd637e3ef3371cab6265c3e08)
+        ;
+
+        
+    
+    
+            marker_6d3ce880c94f5945ffaa03f73e11295c.bindTooltip(
+                `<div>
+                     <b>UniÃ£o QuÃ­mica Farmaceutica Nacional S/A</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_4887d4bb2749837757f06acd48991520 = L.marker(
+        [-23.629045666239854, -46.69226089774777],
+        {}
+    ).addTo(feature_group_fe9492644a30b4a58a2b6423aa18561e).on('click', onClick);
+    
+            var icon_6feaf5bc50e8c259d30f5b577d0ff4c8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-industry", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4887d4bb2749837757f06acd48991520.setIcon(icon_6feaf5bc50e8c259d30f5b577d0ff4c8);
+        
+    
+        var popup_1a82c2d8acf248fb7b52ae4d7a521a6e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e3d290ad271ee09c4997e6ff6ab8a690 = $(`<div id="html_e3d290ad271ee09c4997e6ff6ab8a690" style="width: 100.0%; height: 100.0%;"><p id="latlon">-23.629045666239854, -46.69226089774777</p></div>`)[0];
+            popup_1a82c2d8acf248fb7b52ae4d7a521a6e.setContent(html_e3d290ad271ee09c4997e6ff6ab8a690);
+        
+
+        marker_4887d4bb2749837757f06acd48991520.bindPopup(popup_1a82c2d8acf248fb7b52ae4d7a521a6e)
+        ;
+
+        
+    
+    
+            marker_4887d4bb2749837757f06acd48991520.bindTooltip(
+                `<div>
+                     <b>UniÃ£o QuÃ­mica Internacional Ltda.</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_353094c781eb176b662bfeadfe520eed = L.marker(
+        [33.42289282718011, -81.94282225703408],
+        {}
+    ).addTo(feature_group_fe9492644a30b4a58a2b6423aa18561e).on('click', onClick);
+    
+            var icon_c8b61082a2e3950b5dc85fab4aec7124 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-industry", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_353094c781eb176b662bfeadfe520eed.setIcon(icon_c8b61082a2e3950b5dc85fab4aec7124);
+        
+    
+        var popup_38e481acbb5798254f7da3bf83f893bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_813bad1a0b3f4be5484df1ef40ab18f9 = $(`<div id="html_813bad1a0b3f4be5484df1ef40ab18f9" style="width: 100.0%; height: 100.0%;"><p id="latlon">33.42289282718011, -81.94282225703408</p></div>`)[0];
+            popup_38e481acbb5798254f7da3bf83f893bc.setContent(html_813bad1a0b3f4be5484df1ef40ab18f9);
+        
+
+        marker_353094c781eb176b662bfeadfe520eed.bindPopup(popup_38e481acbb5798254f7da3bf83f893bc)
+        ;
+
+        
+    
+    
+            marker_353094c781eb176b662bfeadfe520eed.bindTooltip(
+                `<div>
+                     <b>Union Agener - Augusta Technology Center</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_b775e16cf116be5f291b49b64d7b0244 = L.featureGroup(
+                {}
+            ).addTo(map_85b9ff868ba0218e49c54203e01c2a01);
+        
+    
+    var marker_b39fdc47230eaa364d1b4ece17000a1b = L.marker(
+        [-22.389019888750862, -45.743671854583035],
+        {}
+    ).addTo(feature_group_b775e16cf116be5f291b49b64d7b0244).on('click', onClick);
+    
+            var icon_f776383d0cf48b5c6f3df0848ed8931e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-leaf", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b39fdc47230eaa364d1b4ece17000a1b.setIcon(icon_f776383d0cf48b5c6f3df0848ed8931e);
+        
+    
+        var popup_73fc9c8c6c40de8f6a2bb5fead91ec38 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f7081f435b71865458c4f9b04b74c891 = $(`<div id="html_f7081f435b71865458c4f9b04b74c891" style="width: 100.0%; height: 100.0%;"><p id="latlon">-22.389019888750862, -45.743671854583035</p></div>`)[0];
+            popup_73fc9c8c6c40de8f6a2bb5fead91ec38.setContent(html_f7081f435b71865458c4f9b04b74c891);
+        
+
+        marker_b39fdc47230eaa364d1b4ece17000a1b.bindPopup(popup_73fc9c8c6c40de8f6a2bb5fead91ec38)
+        ;
+
+        
+    
+    
+            marker_b39fdc47230eaa364d1b4ece17000a1b.bindTooltip(
+                `<div>
+                     <b>AGROPECUARIA MARTONA LTDA</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_3ed727ef0e2948e0bc8f5f06aa384059 = L.marker(
+        [-17.744425676901724, -48.62540779698353],
+        {}
+    ).addTo(feature_group_b775e16cf116be5f291b49b64d7b0244).on('click', onClick);
+    
+            var icon_a4e044979ce78f90224f5e9fd7451fb3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-leaf", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3ed727ef0e2948e0bc8f5f06aa384059.setIcon(icon_a4e044979ce78f90224f5e9fd7451fb3);
+        
+    
+        var popup_4cf6a766ef7df7adc830255c02674a84 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cd14deadf2f4add093b552007ce418fa = $(`<div id="html_cd14deadf2f4add093b552007ce418fa" style="width: 100.0%; height: 100.0%;"><p id="latlon">-17.744425676901724, -48.62540779698353</p></div>`)[0];
+            popup_4cf6a766ef7df7adc830255c02674a84.setContent(html_cd14deadf2f4add093b552007ce418fa);
+        
+
+        marker_3ed727ef0e2948e0bc8f5f06aa384059.bindPopup(popup_4cf6a766ef7df7adc830255c02674a84)
+        ;
+
+        
+    
+    
+            marker_3ed727ef0e2948e0bc8f5f06aa384059.bindTooltip(
+                `<div>
+                     <b>AGROPECUARIA MARTONA LTDA</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_187860e441fa9742a4e86257d437d8ff = L.marker(
+        [-17.5604423239637, -52.5295005347244],
+        {}
+    ).addTo(feature_group_b775e16cf116be5f291b49b64d7b0244).on('click', onClick);
+    
+            var icon_eb30da6ebcac42a0892f5dfaf2777929 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-leaf", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_187860e441fa9742a4e86257d437d8ff.setIcon(icon_eb30da6ebcac42a0892f5dfaf2777929);
+        
+    
+        var popup_08953fabf4efc4fb6986ad9338ce88cb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_de9fc274f938e4be94d28f3fd1d8fe41 = $(`<div id="html_de9fc274f938e4be94d28f3fd1d8fe41" style="width: 100.0%; height: 100.0%;"><p id="latlon">-17.5604423239637, -52.5295005347244</p></div>`)[0];
+            popup_08953fabf4efc4fb6986ad9338ce88cb.setContent(html_de9fc274f938e4be94d28f3fd1d8fe41);
+        
+
+        marker_187860e441fa9742a4e86257d437d8ff.bindPopup(popup_08953fabf4efc4fb6986ad9338ce88cb)
+        ;
+
+        
+    
+    
+            marker_187860e441fa9742a4e86257d437d8ff.bindTooltip(
+                `<div>
+                     <b>AGROPECUARIA MARTONA LTDA</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_36f92ffc2981fd61bb5cdc4aab7c82e7 = L.marker(
+        [-22.250800456797506, -45.96860242406893],
+        {}
+    ).addTo(feature_group_b775e16cf116be5f291b49b64d7b0244).on('click', onClick);
+    
+            var icon_99305445042393fb56f6e1debe52aaad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-leaf", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_36f92ffc2981fd61bb5cdc4aab7c82e7.setIcon(icon_99305445042393fb56f6e1debe52aaad);
+        
+    
+        var popup_ceb51cd235082bf05d9f0684baa81a59 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_defc77872b27c80ec0c6f64882ffae2f = $(`<div id="html_defc77872b27c80ec0c6f64882ffae2f" style="width: 100.0%; height: 100.0%;"><p id="latlon">-22.250800456797506, -45.96860242406893</p></div>`)[0];
+            popup_ceb51cd235082bf05d9f0684baa81a59.setContent(html_defc77872b27c80ec0c6f64882ffae2f);
+        
+
+        marker_36f92ffc2981fd61bb5cdc4aab7c82e7.bindPopup(popup_ceb51cd235082bf05d9f0684baa81a59)
+        ;
+
+        
+    
+    
+            marker_36f92ffc2981fd61bb5cdc4aab7c82e7.bindTooltip(
+                `<div>
+                     <b>AGROPECUARIA MARTONA LTDA</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_a2bd576919be4729061535675221d285 = L.marker(
+        [-23.597392913836373, -46.69723903242666],
+        {}
+    ).addTo(feature_group_b775e16cf116be5f291b49b64d7b0244).on('click', onClick);
+    
+            var icon_953651c99d719f23a20427ff173631a1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-leaf", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a2bd576919be4729061535675221d285.setIcon(icon_953651c99d719f23a20427ff173631a1);
+        
+    
+        var popup_196496d5edc9f245a6876f3b9368b19a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0c63a9a86a755b827cd72659c9a7a418 = $(`<div id="html_0c63a9a86a755b827cd72659c9a7a418" style="width: 100.0%; height: 100.0%;"><p id="latlon">-23.597392913836373, -46.69723903242666</p></div>`)[0];
+            popup_196496d5edc9f245a6876f3b9368b19a.setContent(html_0c63a9a86a755b827cd72659c9a7a418);
+        
+
+        marker_a2bd576919be4729061535675221d285.bindPopup(popup_196496d5edc9f245a6876f3b9368b19a)
+        ;
+
+        
+    
+    
+            marker_a2bd576919be4729061535675221d285.bindTooltip(
+                `<div>
+                     <b>AGROPECUARIA MARTONA LTDA</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_de15b5b996869527a0591bc62610d637 = L.featureGroup(
+                {}
+            ).addTo(map_85b9ff868ba0218e49c54203e01c2a01);
+        
+    
+    var marker_d26a4e12437a3af5b8966384960faff4 = L.marker(
+        [-23.601528648733293, -46.69833943114551],
+        {}
+    ).addTo(feature_group_de15b5b996869527a0591bc62610d637).on('click', onClick);
+    
+            var icon_74df94dce846108ff0a8c63c91f1141f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-building", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_d26a4e12437a3af5b8966384960faff4.setIcon(icon_74df94dce846108ff0a8c63c91f1141f);
+        
+    
+        var popup_1be6d5ff855523854f24b4099cbd9eaa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07c908332d7f945a8eb75518aa3505fa = $(`<div id="html_07c908332d7f945a8eb75518aa3505fa" style="width: 100.0%; height: 100.0%;"><p id="latlon">-23.601528648733293, -46.69833943114551</p></div>`)[0];
+            popup_1be6d5ff855523854f24b4099cbd9eaa.setContent(html_07c908332d7f945a8eb75518aa3505fa);
+        
+
+        marker_d26a4e12437a3af5b8966384960faff4.bindPopup(popup_1be6d5ff855523854f24b4099cbd9eaa)
+        ;
+
+        
+    
+    
+            marker_d26a4e12437a3af5b8966384960faff4.bindTooltip(
+                `<div>
+                     <b>UniÃ£o QuÃ­mica Farmaceutica Nacional S/A</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var marker_3147bba0c384f9df3edcddef92f18df1 = L.marker(
+        [0.0, -60.0],
+        {}
+    ).addTo(map_85b9ff868ba0218e49c54203e01c2a01).on('click', onClick);
+    
+            var icon_d94cee269792e42fc3b003432644d864 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "pink", "prefix": "glyphicon"}
+            );
+            marker_3147bba0c384f9df3edcddef92f18df1.setIcon(icon_d94cee269792e42fc3b003432644d864);
+        
+    
+        var popup_0f5ad6594fd8a6a495ad306a5f3ee189 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_813efd9ac54571d0ec5a48bfc085f975 = $(`<div id="html_813efd9ac54571d0ec5a48bfc085f975" style="width: 100.0%; height: 100.0%;">Texto do marcador</div>`)[0];
+            popup_0f5ad6594fd8a6a495ad306a5f3ee189.setContent(html_813efd9ac54571d0ec5a48bfc085f975);
+        
+
+        marker_3147bba0c384f9df3edcddef92f18df1.bindPopup(popup_0f5ad6594fd8a6a495ad306a5f3ee189)
+        ;
+
+        
+    
+    
+            marker_3147bba0c384f9df3edcddef92f18df1.bindTooltip(
+                `<div>
+                     Clique aqui
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+    var circle_marker_14b09ec38fe1c02f23093ee2face3858 = L.marker(
+        [0.0, -60.0],
+        {"bubblingMouseEvents": true, "color": "#234328", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#328923", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50, "stroke": true, "weight": 3}
+    ).addTo(map_85b9ff868ba0218e49c54203e01c2a01).on('click', onClick);
+    
+    function myFunction() {
+      /* Get the text field */
+      var copyText = document.getElementById("myInput");
+
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+      /* Copy the text inside the text field */
+      document.execCommand("copy");
+    }
+
+    function copy(text) {
+        var input = document.createElement('textarea');
+        input.innerHTML = text;
+        document.body.appendChild(input);
+        input.select();
+        var result = document.execCommand('copy');
+        document.body.removeChild(input);
+        return result;
+    };
+    
+    function getInnerText( sel ) {
+        var txt = '';
+        $( sel ).contents().each(function() {
+            var children = $(this).children();
+            txt += ' ' + this.nodeType === 3 ? this.nodeValue : children.length ? getInnerText( this ) : $(this).text();
+        });
+        return txt;
+    };
+
+    /* This function is used to copy by clicking on Markers - Rename this and the next */
+    function _onClick(e) {
+       var popup = e.target.getPopup();
+       var content = popup.getContent();
+       text = getInnerText(content);
+       copy(text);
+    };
+
+    /* This function is used to copy by daggable Markers */
+    function onClick(e) {
+       var lat = e.latlng.lat; 
+       var lng = e.latlng.lng;
+       var newContent = '<p id="latlon">' + lat + ', ' + lng + '</p>';
+       e.target.setPopupContent(newContent);
+       copy(lat + ', ' + lng);
+    };
+    
+    
+            var tile_layer_4b8194e1c67e6a15e8e43192b5900016 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_d8db68f707ad8b6b292c68aad3ac656e = new L.Control.MiniMap(
+                tile_layer_4b8194e1c67e6a15e8e43192b5900016,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_85b9ff868ba0218e49c54203e01c2a01.addControl(mini_map_d8db68f707ad8b6b292c68aad3ac656e);
+        
+    
+                var lat_lng_popup_1e94c42584f4598cdcdcb1a9b5d7fc97 = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_1e94c42584f4598cdcdcb1a9b5d7fc97
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_85b9ff868ba0218e49c54203e01c2a01);
+                    }
+                map_85b9ff868ba0218e49c54203e01c2a01.on('click', latLngPop);
+            
+    
+            var mouse_position_4207d32fba8db30133dcd3b7e2802861 = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomleft", "prefix": "Coordenadas: ", "separator": ","}
+            );
+            mouse_position_4207d32fba8db30133dcd3b7e2802861.options["latFormatter"] =
+                undefined;
+            mouse_position_4207d32fba8db30133dcd3b7e2802861.options["lngFormatter"] =
+                undefined;
+            map_85b9ff868ba0218e49c54203e01c2a01.addControl(mouse_position_4207d32fba8db30133dcd3b7e2802861);
+        
+    
+            var layer_control_e71ab637900ee057d1a73645ce010de0 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_171d53a1d176b122addbf8d88895b050,
+                    "stamenterrain" : tile_layer_4a1e172e3437f8da23a49f4bb518d6c7,
+                    "stamentoner" : tile_layer_9da75608eafe0b2c26bb199166f3500f,
+                    "stamenwatercolor" : tile_layer_12c387e1d28d1002bb92f31c568c201e,
+                    "cartodbpositron" : tile_layer_5a4f803e7b19d0e43a8f1d206094cc30,
+                    "cartodbdark_matter" : tile_layer_2dc30aed9fd857c934754fef103a7fb7,
+                },
+                overlays :  {
+                    "F\u0026F" : feature_group_40ac56653f581d034c488cc7869c7254,
+                    "Industrial" : feature_group_fe9492644a30b4a58a2b6423aa18561e,
+                    "Agro" : feature_group_b775e16cf116be5f291b49b64d7b0244,
+                    "Adm" : feature_group_de15b5b996869527a0591bc62610d637,
+                },
+            };
+            L.control.layers(
+                layer_control_e71ab637900ee057d1a73645ce010de0.base_layers,
+                layer_control_e71ab637900ee057d1a73645ce010de0.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_85b9ff868ba0218e49c54203e01c2a01);
+            tile_layer_4a1e172e3437f8da23a49f4bb518d6c7.remove();
+            tile_layer_9da75608eafe0b2c26bb199166f3500f.remove();
+            tile_layer_12c387e1d28d1002bb92f31c568c201e.remove();
+            tile_layer_5a4f803e7b19d0e43a8f1d206094cc30.remove();
+            tile_layer_2dc30aed9fd857c934754fef103a7fb7.remove();
+        
+</script>

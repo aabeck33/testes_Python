@@ -1,0 +1,2 @@
+Essa é a primeira linha do arquivo texto.
+Essa é a segunda linha do arquivo texto.
